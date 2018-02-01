@@ -1,0 +1,24 @@
+{
+  "userdata": [
+    {
+      "username": "username1",
+      "password": "123456"
+    },
+    {
+     "username": "username2",
+      "password": "123456"
+    },
+    {
+     "username": "username3",
+      "password": "123456"
+    },
+    {
+     "username": "username4",
+      "password": "123456"
+    },
+    {
+     "username": "username5",
+      "password": "123456"
+    }
+  ]
+}

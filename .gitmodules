@@ -1,0 +1,6 @@
+[submodule "MobileTestFramework"]
+	path = MobileTestFramework
+	url = https://github.com/rayzhouzhj/MobileTestFramework
+[submodule "MobileTestCommon"]
+	path = MobileTestCommon
+	url = https://github.com/rayzhouzhj/MobileTestCommon
