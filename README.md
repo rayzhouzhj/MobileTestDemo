@@ -22,4 +22,4 @@ PLATFORM=Android DEBUG_MODE=OFF mvn clean test -Dtest=Runner
  - ANDROID_HOME
  - PATH
  
-### OR you can also override any config in run configuation
+### You can also override any properities of [config.properties](https://github.com/rayzhouzhj/MobileTestDemo/blob/master/config.properties) in eclipse run configuration.
