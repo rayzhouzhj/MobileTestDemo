@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.github.framework.context.RunTimeContext;
-import com.github.framework.context.TestingDevice;
+import com.rayzhou.framework.context.RunTimeContext;
+import com.rayzhou.framework.context.TestingDevice;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -41,18 +41,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() * 9 / 10, y)
+			action.press(TestingDevice.getDeviceWidth() * 9 / 10, y)
 			.waitAction(Duration.ofMillis(500))
-			.moveTo(TestingDevice.get().getDeviceWidth() / 10, y)
+			.moveTo(TestingDevice.getDeviceWidth() / 10, y)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() * 9 / 10, y)
+			action.press(TestingDevice.getDeviceWidth() * 9 / 10, y)
 			// TODO Bug for Appium touch action in x, y coordinate
-			.moveTo(-TestingDevice.get().getDeviceWidth() * 8 / 10, 0)
+			.moveTo(-TestingDevice.getDeviceWidth() * 8 / 10, 0)
 			.release().perform();
 			
 			sleep(500);
@@ -66,18 +66,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() * 9 / 10, TestingDevice.get().getDeviceHight() * 4 / 5)
+			action.press(TestingDevice.getDeviceWidth() * 9 / 10, TestingDevice.getDeviceHight() * 4 / 5)
 			.waitAction(Duration.ofMillis(500))
-			.moveTo(TestingDevice.get().getDeviceWidth() / 10, TestingDevice.get().getDeviceHight() * 4 / 5)
+			.moveTo(TestingDevice.getDeviceWidth() / 10, TestingDevice.getDeviceHight() * 4 / 5)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() * 9 / 10, TestingDevice.get().getDeviceHight() * 4 / 5)
+			action.press(TestingDevice.getDeviceWidth() * 9 / 10, TestingDevice.getDeviceHight() * 4 / 5)
 			// TODO Bug for Appium touch action in x, y coordinate
-			.moveTo(-TestingDevice.get().getDeviceWidth() * 8 / 10, 0)
+			.moveTo(-TestingDevice.getDeviceWidth() * 8 / 10, 0)
 			.release().perform();
 			
 			sleep(500);
@@ -102,18 +102,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 10, y)
+			action.press(TestingDevice.getDeviceWidth() / 10, y)
 			.waitAction(Duration.ofMillis(500))
-			.moveTo(TestingDevice.get().getDeviceWidth() * 9 / 10, y)
+			.moveTo(TestingDevice.getDeviceWidth() * 9 / 10, y)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 10, y)
+			action.press(TestingDevice.getDeviceWidth() / 10, y)
 			// TODO Bug for Appium touch action in x, y coordinate
-			.moveTo(TestingDevice.get().getDeviceWidth() * 9 / 10, 0)
+			.moveTo(TestingDevice.getDeviceWidth() * 9 / 10, 0)
 			.release().perform();
 			
 			sleep(500);
@@ -127,18 +127,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 10, TestingDevice.get().getDeviceHight() * 4 / 5)
+			action.press(TestingDevice.getDeviceWidth() / 10, TestingDevice.getDeviceHight() * 4 / 5)
 			.waitAction(Duration.ofMillis(500))
-			.moveTo(TestingDevice.get().getDeviceWidth() * 9 / 10, TestingDevice.get().getDeviceHight() * 4 / 5)
+			.moveTo(TestingDevice.getDeviceWidth() * 9 / 10, TestingDevice.getDeviceHight() * 4 / 5)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 10, TestingDevice.get().getDeviceHight() * 4 / 5)
+			action.press(TestingDevice.getDeviceWidth() / 10, TestingDevice.getDeviceHight() * 4 / 5)
 			// TODO Bug for Appium touch action in x, y coordinate
-			.moveTo(TestingDevice.get().getDeviceWidth() * 9 / 10, 0)
+			.moveTo(TestingDevice.getDeviceWidth() * 9 / 10, 0)
 			.release().perform();
 			
 			sleep(500);
@@ -169,16 +169,16 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 2, startY)
+			action.press(TestingDevice.getDeviceWidth() / 2, startY)
 			.waitAction(duration)
-			.moveTo(TestingDevice.get().getDeviceWidth() / 2, endY)
+			.moveTo(TestingDevice.getDeviceWidth() / 2, endY)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 2, startY)
+			action.press(TestingDevice.getDeviceWidth() / 2, startY)
 			.waitAction(duration)
 			.moveTo(0, endY)
 			.release().perform();
@@ -191,18 +191,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 2, TestingDevice.get().getDeviceHight() / 10)
+			action.press(TestingDevice.getDeviceWidth() / 2, TestingDevice.getDeviceHight() / 10)
 			.waitAction(Duration.ofMillis(500))
-			.moveTo(TestingDevice.get().getDeviceWidth() / 2, TestingDevice.get().getDeviceHight() * 9 / 10)
+			.moveTo(TestingDevice.getDeviceWidth() / 2, TestingDevice.getDeviceHight() * 9 / 10)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 2, TestingDevice.get().getDeviceHight() / 10)
+			action.press(TestingDevice.getDeviceWidth() / 2, TestingDevice.getDeviceHight() / 10)
 			.waitAction(Duration.ofMillis(200))
-			.moveTo(0, TestingDevice.get().getDeviceHight() * 8 / 10)
+			.moveTo(0, TestingDevice.getDeviceHight() * 8 / 10)
 			.release().perform();
 		}
 	}
@@ -213,18 +213,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() - 5, TestingDevice.get().getDeviceHight() * 7 / 10)
+			action.press(TestingDevice.getDeviceWidth() - 5, TestingDevice.getDeviceHight() * 7 / 10)
 			.waitAction(Duration.ofMillis(2000))
-			.moveTo(TestingDevice.get().getDeviceWidth() - 5, TestingDevice.get().getDeviceHight() / 10)
+			.moveTo(TestingDevice.getDeviceWidth() - 5, TestingDevice.getDeviceHight() / 10)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() - 5, TestingDevice.get().getDeviceHight() * 7 / 10)
+			action.press(TestingDevice.getDeviceWidth() - 5, TestingDevice.getDeviceHight() * 7 / 10)
 			.waitAction(Duration.ofMillis(100))
-			.moveTo(0, -(TestingDevice.get().getDeviceHight() * 8 / 10))
+			.moveTo(0, -(TestingDevice.getDeviceHight() * 8 / 10))
 			.release().perform();
 		}
 	}
@@ -235,18 +235,18 @@ public class BaseAppAction
 
 		if(RunTimeContext.isAndroidPlatform())
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 2, TestingDevice.get().getDeviceHight() * 7 / 10)
+			action.press(TestingDevice.getDeviceWidth() / 2, TestingDevice.getDeviceHight() * 7 / 10)
 			.waitAction(Duration.ofMillis(2000))
-			.moveTo(TestingDevice.get().getDeviceWidth() / 2, TestingDevice.get().getDeviceHight() / 10)
+			.moveTo(TestingDevice.getDeviceWidth() / 2, TestingDevice.getDeviceHight() / 10)
 			.release().perform();
 			
 			sleep(1000);
 		}
 		else
 		{
-			action.press(TestingDevice.get().getDeviceWidth() / 2, TestingDevice.get().getDeviceHight() * 7 / 10)
+			action.press(TestingDevice.getDeviceWidth() / 2, TestingDevice.getDeviceHight() * 7 / 10)
 			.waitAction(Duration.ofMillis(100))
-			.moveTo(0, -(TestingDevice.get().getDeviceHight() * 8 / 10))
+			.moveTo(0, -(TestingDevice.getDeviceHight() * 8 / 10))
 			.release().perform();
 		}
 	}

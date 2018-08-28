@@ -7,13 +7,13 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 
-import com.github.demo.app.pages.HomePage;
 import com.github.demo.app.pages.BasePage;
-import com.github.framework.context.RunTimeContext;
-import com.github.framework.context.TestingDevice;
-import com.github.framework.device.MobilePlatform;
-import com.github.framework.device.logreader.AndroidLogReader;
-import com.github.framework.utils.ADBShell;
+import com.github.demo.app.pages.HomePage;
+import com.rayzhou.framework.context.RunTimeContext;
+import com.rayzhou.framework.context.TestingDevice;
+import com.rayzhou.framework.device.MobilePlatform;
+import com.rayzhou.framework.device.logreader.AndroidLogReader;
+import com.rayzhou.framework.utils.ADBShell;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -27,7 +27,7 @@ public class Calculator extends BaseAppAction
 	
 	public static Calculator createInstance()
 	{
-		return new Calculator(TestingDevice.get().getDriver());
+		return new Calculator(TestingDevice.getDriver());
 	}
 	
 	private Calculator(AppiumDriver<MobileElement> driver)
@@ -81,7 +81,7 @@ public class Calculator extends BaseAppAction
 		{
 			ADBShell.killApp(TestingDevice.getDeviceUDID(), RunTimeContext.getInstance().getProperty("APP_PACKAGE"));
 			sleep(2000);
-			((AndroidLogReader)TestingDevice.get().getLogReader()).updateAppProcessID();
+			((AndroidLogReader)TestingDevice.getLogReader()).updateAppProcessID();
 		}
 	}
 
@@ -120,22 +120,22 @@ public class Calculator extends BaseAppAction
 	public List<String> getLogs()
 	{
 		sleep(2000);
-		return TestingDevice.get().getLogReader().getTrackingLogs();
+		return TestingDevice.getLogReader().getTrackingLogs();
 	}
 	
 	public void clearLogs()
 	{
-		TestingDevice.get().getLogReader().getTrackingLogs();
+		TestingDevice.getLogReader().getTrackingLogs();
 	}
 	
 	public List<String> getLogs(int minLogEntryCount)
 	{
 		sleep(1000);
-		List<String> logs = TestingDevice.get().getLogReader().getTrackingLogs();
+		List<String> logs = TestingDevice.getLogReader().getTrackingLogs();
 		for(int i = 0; i < 10 && logs.size() < minLogEntryCount; i++)
 		{
 			sleep(1000);
-			logs.addAll(TestingDevice.get().getLogReader().getTrackingLogs());
+			logs.addAll(TestingDevice.getLogReader().getTrackingLogs());
 		}
 
 		return logs;

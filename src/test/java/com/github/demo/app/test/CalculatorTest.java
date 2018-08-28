@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import com.github.demo.app.Calculator;
 import com.github.demo.test.base.ProjectBaseTest;
-import com.github.framework.annotations.InstallApp;
 import com.github.testcommon.test.base.TestDataManager;
+import com.rayzhou.framework.annotations.InstallApp;
 
 public class CalculatorTest extends ProjectBaseTest
 {
